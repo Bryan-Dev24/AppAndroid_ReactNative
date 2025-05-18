@@ -1,25 +1,34 @@
 {
   "expo": {
-    "name": "MeuAppDeNavegacao",
-    "slug": "MeuAppDeNavegacao",
+    "name": "AppAndroid_React-Native",
+    "slug": "AppAndroid",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDesciption": "Este aplicativo precisa acessar sua galeria de fotos",
+        "NSContactUsageDescription": "Este aplicativo precisa acessar seus contatos"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "READ_CONTACTS",
+        "WRITE_CONTACTS",
+        "READ_EXTERNAL_STORAGE",
+        "WITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
